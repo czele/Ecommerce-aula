@@ -1,0 +1,23 @@
+--LEFT JOIN - Obter todos os clientes que não fizeram pedidos
+--SELECT
+--	T01* --Para procurar só da tabela Cliente
+--FROM Cliente T01
+--	LEFT JOIN Pedido T02 ON T02.ClienteId = T01.Id
+--WHERE T02.Id IS NULL
+
+--LEFT JOIN - Produtos que não foram vendidos
+--SELECT 
+--	T01.*
+--FROM Produto T01
+--	LEFT JOIN Pedido T02 ON T02.ProdutoId = T01.Id
+--WHERE T02.Id IS NULL
+
+--INNER JOIN
+--SELECT 
+--	T02.Nome AS Produto,
+--	T02.Preco AS Preço,
+--	T03.Nome AS Cliente,
+--	T01.Valor
+--FROM Pedido T01
+--	JOIN Produto T02 ON T02.Id = T01.ProdutoId
+--	JOIN Cliente T03 ON T03.Id = T01.ClienteId
